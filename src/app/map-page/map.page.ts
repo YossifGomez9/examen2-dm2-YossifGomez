@@ -113,7 +113,7 @@ export class MapPage implements AfterViewInit {
 
     const markerImage = document.createElement('img');
     markerImage.src = 'assets/gas.pns';
-    markerImage.alt = 'Cilindro de gas';
+    markerImage.alt = 'gas';
     markerImage.style.width = '64px';
     markerImage.style.height = '64px';
     markerImage.style.objectFit = 'contain';
