@@ -4,6 +4,7 @@ import { IonContent, IonIcon } from '@ionic/angular/standalone';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { addIcons } from 'ionicons';
 import { imageOutline, location } from 'ionicons/icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,16 @@ import { imageOutline, location } from 'ionicons/icons';
 export class HomePage {
   imageUrl: string | null = null;
 
-  constructor() {
+  constructor(private router: Router) {
     addIcons({
       imageOutline,
       location,
     });
   }
+
+  goToMapPage(): void {
+  this.router.navigate(['/map-page']);
+}
 
   async seleccionarImagen(): Promise<void> {
     try {

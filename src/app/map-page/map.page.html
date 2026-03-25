@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="map-page-wrapper">
+    <div class="info-card" *ngIf="loading">
+      <ion-spinner name="crescent"></ion-spinner>
+      <p>Cargando ubicación y mapa...</p>
+    </div>
+
+    <div class="info-card error" *ngIf="!loading && errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <div class="coords-card" *ngIf="!loading && latitude !== null && longitude !== null">
+      <p><strong>Latitud:</strong> {{ latitude }}</p>
+      <p><strong>Longitud:</strong> {{ longitude }}</p>
+    </div>
+
+    <div #mapContainer class="map-container" *ngIf="!loading && !permissionDenied && latitude !== null && longitude !== null"></div>
+  </div>
+</ion-content>
