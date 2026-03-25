@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">YossifExamen2</string>
+    <string name="title_activity_main">YossifExamen2</string>
+    <string name="package_name">com.yossif.examenapp</string>
+    <string name="custom_url_scheme">com.yossif.examenapp</string>
+</resources>

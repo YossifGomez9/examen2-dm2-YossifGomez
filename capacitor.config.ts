@@ -1,8 +1,8 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'examen-dm2',
+  appId: 'com.yossif.examenapp',
+  appName: 'YossifExamen2',
   webDir: 'www'
 };
 
